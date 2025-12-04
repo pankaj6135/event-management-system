@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css' rel='stylesheet' />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🎓 College EMS</div>
+    <ul class="nav-links">
+      <li><a href="#events">Events</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+      <li><a href="admin-login.html">Admin</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Manage & Explore College Events</h1>
+    <p>Register, explore, and get notified about all upcoming college events.</p>
+    <button class="btn" onclick="scrollToEvents()">View Events</button>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="events-section">
+    <h2>Upcoming Events</h2>
+
+    <div class="event-container" id="eventContainer">
+      <!-- Events injected by script.js -->
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section id="calendar" class="calendar-section">
+    <h2>Event Calendar</h2>
+    <div id="eventCalendar"></div>
+  </section>
+
+  <!-- Registration Popup -->
+  <div class="popup" id="popupForm">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeForm()">×</span>
+      <h2>Event Registration</h2>
+
+      <form id="regForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="eventName" readonly>
+        <button type="submit" class="btn">Register Now</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="calendar.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - College EMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadUsers()">
+
+  <nav class="navbar">
+    <div class="logo">Admin Dashboard</div>
+    <button class="btn" onclick="logoutAdmin()">Logout</button>
+  </nav>
+
+  <h2 style="text-align:center;margin-top:20px;">Registered Users</h2>
+
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Event</th>
+          <th>Ticket</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+  </div>
+
+  <script src="ticket.js"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>
